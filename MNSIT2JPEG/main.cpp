@@ -99,13 +99,13 @@ int main()
 	//reference: http://eric-yuan.me/cpp-read-mnist/  
 	//test images and test labels  
 	//read MNIST image into OpenCV Mat vector  
-	string filename_test_images = "C:/Users/Ruyiwei/Downloads/t10k-images.idx3-ubyte";
+	string filename_test_images = "MNIST//t10k-images.idx3-ubyte";
 	int number_of_test_images = 10000;
 	vector<cv::Mat> vec_test_images;
 	read_Mnist(filename_test_images, vec_test_images);
 
 	//read MNIST label into int vector  
-	string filename_test_labels = "C:/Users/Ruyiwei/Downloads/t10k-labels.idx1-ubyte";
+	string filename_test_labels = "MNIST//t10k-labels.idx1-ubyte";
 	vector<int> vec_test_labels(number_of_test_images);
 	read_Mnist_Label(filename_test_labels, vec_test_labels);
 
@@ -117,7 +117,7 @@ int main()
 	int count_digits[10];
 	for (int i = 0; i < 10; i++)
 		count_digits[i] = 0;
-	string save_test_images_path = "C:/Users/Ruyiwei/Downloads/";
+	string save_test_images_path = "MNIST//";
 
 	for (unsigned int i = 0; i < vec_test_images.size(); i++) {
 		int number = vec_test_labels[i];
@@ -127,13 +127,13 @@ int main()
 	}
 	//train images and train labels  
 	//read MNIST image into OpenCV Mat vector  
-	string filename_train_images = "C:/Users/Ruyiwei/Downloads/train-images.idx3-ubyte";
+	string filename_train_images = "MNIST//train-images.idx3-ubyte";
 	int number_of_train_images = 60000;
 	vector<cv::Mat> vec_train_images;
 	read_Mnist(filename_train_images, vec_train_images);
 
 	//read MNIST label into int vector  
-	string filename_train_labels = "C:/Users/Ruyiwei/Downloads/train-labels.idx1-ubyte";
+	string filename_train_labels = "MNIST//train-labels.idx1-ubyte";
 	vector<int> vec_train_labels(number_of_train_images);
 	read_Mnist_Label(filename_train_labels, vec_train_labels);
 
@@ -144,7 +144,7 @@ int main()
 	//save train images  
 	for (int i = 0; i < 10; i++)
 		count_digits[i] = 0;
-	string save_train_images_path = "C:/Users/Ruyiwei/Downloads/";
+	string save_train_images_path = "MNIST_Image//";
 
 	for (size_t i = 0; i < vec_train_images.size(); i++) {
 		int number = vec_train_labels[i];
