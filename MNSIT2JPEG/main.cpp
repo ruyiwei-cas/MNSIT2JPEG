@@ -9,7 +9,7 @@ using namespace std;
 int ReverseInt(int i)
 {
 	unsigned char ch1, ch2, ch3, ch4;
-	ch1 = i & 255;
+	ch1 = i & 255;     
 	ch2 = (i >> 8) & 255;
 	ch3 = (i >> 16) & 255;
 	ch4 = (i >> 24) & 255;
